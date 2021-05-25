@@ -1,0 +1,3 @@
+{
+  "foo": "Comments should always be enabled in .jsonc files, even if there is none already present"
+}

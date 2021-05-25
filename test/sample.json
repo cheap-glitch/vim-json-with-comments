@@ -1,0 +1,113 @@
+// Single-line comment
+
+/**
+ * Multi-line comment block
+ *
+ * Comment keywords: TODO NOTE FIXME
+ */
+
+// Normative JSON examples from https://json.org/example.html
+{
+  "menu": {
+    "id": "file",
+    "value": "File",
+    "popup": {
+      "menuitem": [
+        {"value": "New", "onclick": "CreateNewDoc()"},
+        {"value": "Open", "onclick": "OpenDoc()"}, // End-of line comment
+        {"value": "Close", "onclick": "CloseDoc()"}
+      ]
+    }
+  }
+},
+{
+  "widget": {
+    "debug": "on",
+    "window": {
+      "title": /* Comment block in the middle of JSON */ "Sample Konfabulator Widget",
+      "name": "main_window",
+      "width": 500,
+      "height": 500
+    },
+    "image": {
+      "src": "Images/Sun.png",
+      "name": "sun1",
+      "hOffset": 250,
+      "vOffset": 250,
+      "alignment": "center"
+    },
+    "text": {
+      "data": "Click Here",
+      "size": 36,
+      "style": "bold",
+      "name": "text1",
+      "hOffset": 250,
+      "vOffset": 100,
+      "alignment": "center",
+      "onMouseUp": "sun1.opacity = (sun1.opacity / 100) * 90;"
+    }
+  }
+}
+
+// Even with concealment, strings and numbers & booleans are distinct
+{
+  "string": "this is a string, with a escaped \" inside",
+  "string": "500",
+  "NOT a string": 500,
+  "string": "true",
+  "NOT a string": true
+}
+
+// This block is deliberately mis-indented, try `=ip` to indent it properly
+{
+    "glossary": {
+        "title": "example glossary",
+		"GlossDiv": {
+			"title": "S",
+			"GlossList": {
+                "GlossEntry": {
+                    "ID": "SGML",
+					"SortAs": "SGML",
+					"GlossTerm": "Standard Generalized Markup Language",
+					"Acronym": "SGML",
+					"Abbrev": "ISO 8879:1986",
+					"GlossDef": {
+                        "para": "A meta-markup language, used to create markup languages such as DocBook.",
+						"GlossSeeAlso": ["GML", "XML"]
+                    },
+					"GlossSee": "markup"
+                }
+            }
+        }
+    }
+}
+
+// Invalid syntax errors
+{
+  unquotedKeyword:'singleQuotedString',
+  'singleQuotedKeyword':true,
+  "decimalCantStartWithPeriod":.1,
+  "semicolonAtEndOfThisObject":"trailingComma",
+};
+
+// Missing comma errors
+{
+  "object1": "missingComma"
+  "object2": "value"
+}
+[
+  { "object1": 1 }
+  { "object2": 2 }
+]
+{
+  "object1": []
+  "object2": []
+}
+{
+  "object1": {}
+  "object2": []
+}
+{
+  "object1": true
+  "object2": 2
+}
