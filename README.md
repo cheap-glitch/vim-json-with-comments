@@ -1,5 +1,8 @@
 # 🐏 vim-json-with-comments
 
+[![License](https://shields.io/github/license/cheap-glitch/vim-json-with-comments)](LICENSE)
+[![Latest release](https://shields.io/github/v/release/cheap-glitch/vim-json-with-comments?sort=semver&label=latest%20release&color=green)](https://github.com/cheap-glitch/vim-json-with-comments/releases/latest)
+
 This is a fork of [vim-json](https://github.com/elzr/vim-json) that adds support
 for C-style comments inside JSON files.
 
