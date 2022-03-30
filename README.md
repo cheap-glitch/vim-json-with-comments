@@ -8,23 +8,24 @@ for C-style comments inside JSON files.
 
 ## Features
 
- * All  the goodness  of `vim-json`: precise  highlighting, warnings  for syntax
-   errors, quote concealing, syntactic folding, etc.
-
+ * All the goodness of `vim-json`:
+   precise highlighting, warnings for syntax errors, quote concealing, syntactic
+   folding, etc.
  * Support for single-line (`//`) and multi-line comments (`/**/`)
-
- * Smart file-by-file enabling of comments and spellchecking (can be overridden)
+ * Smart file-by-file enabling of comments and spellchecking
 
 ## Installation
 
 The recommended way of installing plugins in (Neo)Vim is through a plugin manager.
 
 With [dein.vim](https://github.com/Shougo/dein.vim):
+
 ```vim
 dein#add('cheap-glitch/vim-json-with-comments')
 ```
 
 With [vim-plug](https://github.com/junegunn/vim-plug):
+
 ```vim
 Plug 'cheap-glitch/vim-json-with-comments'
 ```
@@ -53,6 +54,7 @@ Configure  the plugin  by  setting  some global  variables  in  your `.vimrc`  /
    comments, `0` to spellcheck the whole file (default: `0`)
 
 Example:
+
 ```vim
 let g:vim_json_warnings = 0
 let g:vim_json_comments = 1
@@ -61,9 +63,11 @@ let g:vim_json_spellcheck_only_comments = 1
 
 Every one of these settings can be  manually overridden in the current buffer by
 setting local buffer variables during the editing process, e.g.
+
 ```vim
 :let b:vim_json_comments=0<CR>
 ```
+
 and then reloading the current buffer with `:e`.
 
 ### Quote concealing
@@ -80,9 +84,11 @@ autocmd FileType json setlocal conceallevel=2
 
 ## Contributing
 
-Contributions are welcome! Note that  this project uses [vint](https://github.com/Vimjas/vint) for linting
-and [vader](https://github.com/junegunn/vader.vim) for testing, so you will need to install them both in order to
-validate your changes.
+Contributions are welcomed! Please open an issue before submitting substantial changes.
+
+<!-- Contributions are welcome! Note that  this project uses [vint](https://github.com/Vimjas/vint) for linting -->
+<!-- and [vader](https://github.com/junegunn/vader.vim) for testing, so you will need to install them both in order to -->
+<!-- validate your changes. -->
 
 ## Acknowledgments
 
@@ -91,9 +97,9 @@ Many thanks to him!
 
 ## Related
 
- * [jsonc](https://github.com/onury/jsonc) - Node.js module to parse JSON with comments
- * [node-jsonc-parser](https://github.com/Microsoft/node-jsonc-parser) - Node.js module to parse and manipulate JSONC
- * [strip-json-comments](https://github.com/sindresorhus/strip-json-comments) - Node.js module to remove comments from JSON data
+ * [`jsonc`](https://github.com/onury/jsonc) – Node.js module to parse JSON with comments
+ * [`node-jsonc-parser`](https://github.com/Microsoft/node-jsonc-parser) – Node.js module to parse and manipulate JSONC
+ * [`strip-json-comments`](https://github.com/sindresorhus/strip-json-comments) – Node.js module to remove comments from JSON data
 
 ## License
 
